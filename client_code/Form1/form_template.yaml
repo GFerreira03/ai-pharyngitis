@@ -1,0 +1,320 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html', background: '', role: null, visible: true}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QYXFOD,NKCGEG'}
+    components:
+    - name: headline_1
+      properties: {role: headline, text: Pharyngitis, align: center, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'XXAOAX,VKPDFG'}
+    - name: label_4
+      properties: {align: right, text: 'Age:', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'TKJJEL,SJVQLL'}
+    - name: age_text
+      properties: {placeholder: '14', spacing_above: small, text: '', type: number}
+      type: TextBox
+      layout_properties: {grid_position: 'TKJJEL,EUNQBP', full_width_row: false, row_background: 'theme:Primary
+          700'}
+      data_bindings:
+      - {property: foreground, code: '', writeback: false}
+    - name: label_5
+      properties: {text: 'Temperature (Celsius): ', italic: false, align: right, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'TKJJEL,AQQZWA'}
+    - name: temperature_text
+      properties: {placeholder: '37.5', type: number, visible: true}
+      type: TextBox
+      layout_properties: {grid_position: 'TKJJEL,VVROOV'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'EBFPVS,TKDFYI'}
+  - name: card_2
+    properties: {role: card, col_spacing: medium, spacing_above: none, spacing_below: none,
+      col_widths: '{}', background: c9c9c9}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NJVKJE,NXIJKX'}
+    components:
+    - name: headline_2
+      properties: {role: headline, text: Symptoms, align: center, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'ZLOKIP,KAJHBO'}
+    - name: card_3
+      properties: {role: card, border: '3px solid #2196F3', background: ''}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ JSDOTL,WHXIGS'}
+      components:
+      - name: pain
+        properties: {text: Pain, align: left, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'GOUFFQ,YCAKOL'}
+      - name: radio_pain_1
+        properties: {text: 'Yes', group_name: paingroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'PHZCBE,AJVYDP'}
+        data_bindings: []
+      - name: radio_pain_2
+        properties: {text: 'No', selected: false, group_name: paingroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'PHZCBE,NLZHVN'}
+    - name: card_5
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ HNZGXE,FEBWQX'}
+      components:
+      - name: tender
+        properties: {text: Tender, align: left, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'HVNMYB,SIQSCG'}
+      - name: radio_tender_1
+        properties: {text: 'Yes', group_name: tendergroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'HSAVKL,QZGXLN'}
+      - name: radio_tender_2
+        properties: {text: 'No', selected: false, group_name: tendergroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'HSAVKL,WKSYHM'}
+    - name: card_7
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ FOLHZO,YBNLAQ'}
+      components:
+      - name: exudate
+        properties: {text: Exudate, spacing_above: none, bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'PWNYGX,TEEKHU'}
+      - name: radio_exudate_1
+        properties: {text: 'Yes', group_name: exudategroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'WSRZTF,YXELXQ'}
+      - name: radio_exudate_2
+        properties: {text: 'No', align: left, group_name: exudategroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'WSRZTF,XJZGPC'}
+    - name: card_9
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ JWHKZQ,RLCXCT'}
+      components:
+      - name: rino
+        properties: {text: 'Rhinorrhea ', align: left, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'ZJJDVR,FRHWXP'}
+      - name: radio_rino_1
+        properties: {text: 'Yes', group_name: rhino, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'GHPQXO,CNBMQN'}
+      - name: radio_rino_2
+        properties: {text: 'No', group_name: rhino, value: '0', underline: false}
+        type: RadioButton
+        layout_properties: {grid_position: 'GHPQXO,PGPXFY'}
+    - name: card_11
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ AKCIKS,JRPCHL'}
+      components:
+      - name: headache
+        properties: {text: 'Headache ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'YMHOME,WJWMGE'}
+      - name: radio_headache_1
+        properties: {text: 'Yes', group_name: head, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'SZGHGG,DEHBXD'}
+      - name: radio_headache_2
+        properties: {text: 'No', group_name: head, value: '0', align: left}
+        type: RadioButton
+        layout_properties: {grid_position: 'SZGHGG,PJLFDX'}
+    - name: card_13
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ZECAEQ KNKUND,BSQEMH'}
+      components:
+      - name: petechiae
+        properties: {text: 'Petechiae ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'CTHGJA,SSVHKA'}
+      - name: radio_petechiae_1
+        properties: {text: 'Yes', group_name: pete, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'NIYGAT,SKUYNI'}
+      - name: radio_petechiae_2
+        properties: {text: 'No', group_name: pete, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'NIYGAT,NQALGN'}
+    - name: card_4
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA AQKRSJ,CNKSHA'}
+      components:
+      - name: swollenadp
+        properties: {text: Swollen Adenoids, bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'HEGCNR,OYNNCQ'}
+      - name: radio_swollenadp_1
+        properties: {text: 'Yes', group_name: swollengroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'BGJZCZ,LYHNED'}
+      - name: radio_swollenadp_2
+        properties: {text: 'No', selected: false, group_name: swollengroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'BGJZCZ,DGXSEG'}
+    - name: card_6
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA ESAFOB,FCXHHL'}
+      components:
+      - name: tonsillarswelling
+        properties: {text: Tonsillar Swelling, bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'HQTSWW,QXEUHP'}
+      - name: radio_tonsillarswelling_1
+        properties: {text: 'Yes', group_name: tonsillargroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'SCEFOT,CUQWZT'}
+      - name: radio_tonsillarswelling_2
+        properties: {text: 'No', group_name: tonsillargroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'SCEFOT,WWZSTA'}
+    - name: card_8
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA TMWHUJ,KJYAJD'}
+      components:
+      - name: cough
+        properties: {text: Cough, bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'AEZBQU,CBHVOC'}
+      - name: radio_cough_1
+        properties: {text: 'Yes', group_name: coughgroup, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'GIQHSS,OTEBDU'}
+      - name: radio_cough_2
+        properties: {text: 'No', group_name: coughgroup, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'GIQHSS,KWEHHN'}
+    - name: card_10
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA XHYCBM,SOMICC'}
+      components:
+      - name: conjunctivitis
+        properties: {text: 'Conjunctivitis ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'AKLEWU,RQTEVN'}
+      - name: radio_conjunctivitis_1
+        properties: {text: 'Yes', group_name: conjutis, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'DDJLVK,FOKCPT'}
+      - name: radio_conjunctivitis_2
+        properties: {text: 'No', group_name: conjutis, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'DDJLVK,UXNEDW'}
+    - name: card_12
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA RXWNRB,HCRCJZ'}
+      components:
+      - name: label_1
+        properties: {text: 'Erythema ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'FEXLTK,XHLFON'}
+      - name: radio_erythema_1
+        properties: {text: 'Yes', group_name: ery, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'XJZCAK,DAWCWO'}
+      - name: radio_erythema_2
+        properties: {text: 'No', group_name: ery, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'XJZCAK,LFNTST'}
+    - name: card_14
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QLCCGQ,ECFXUA YFMQIU,FKLUHS'}
+      components:
+      - name: abdopain
+        properties: {text: 'Abdopain ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'RSDTZL,EUMNTW'}
+      - name: radio_abdopain_1
+        properties: {text: 'Yes', group_name: abdon, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'HTLFNU,KRBQZK'}
+      - name: radio_abdopain_2
+        properties: {text: 'No', group_name: abdon, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'HTLFNU,UKYBIW'}
+    - name: card_15
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LTIBFT,FQWMDT'}
+      components:
+      - name: nauseavomit
+        properties: {text: 'Nauseavomit ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'QRXVBH,EGEGUZ'}
+      - name: radio_nauseavomit_1
+        properties: {text: 'Yes', group_name: nausea, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'GAYVRX,HCLSLS'}
+      - name: radio_nauseavomit_2
+        properties: {text: 'No', group_name: nausea, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'GAYVRX,FTKKEL'}
+    - name: card_16
+      properties: {role: card, border: '3px solid #2196F3'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LTIBFT,UDQQZS'}
+      components:
+      - name: label_2
+        properties: {text: 'Scarlet ', bold: true, align: left}
+        type: Label
+        layout_properties: {grid_position: 'WQRWAP,NGOWNB'}
+      - name: radio_scarlet_1
+        properties: {text: 'Yes', group_name: scarlet, value: '1'}
+        type: RadioButton
+        layout_properties: {grid_position: 'YHWGZQ,VAWULX'}
+      - name: radio_scarlet_2
+        properties: {text: 'No', group_name: scarlet, value: '0'}
+        type: RadioButton
+        layout_properties: {grid_position: 'YHWGZQ,QNPUVO'}
+    - name: spacer_1_copy_5
+      properties: {height: 15}
+      type: Spacer
+      layout_properties: {grid_position: 'DFDFGI,MKWIPD'}
+    - name: label_3
+      properties: {visible: false}
+      type: Label
+      layout_properties: {grid_position: 'QAMDZT,OCYIIU'}
+    - name: send
+      properties: {text: SEND, border: '3px solid #2196F3', bold: true, font_size: 19,
+        font: '', background: '', foreground: black}
+      type: Button
+      layout_properties: {grid_position: 'QAMDZT,YIZGRZ', full_width_row: false, row_background: ''}
+      event_bindings: {click: send_click}
+    - name: label_6
+      properties: {visible: false}
+      type: Label
+      layout_properties: {grid_position: 'QAMDZT,DDWGRS'}
+    - name: result_label
+      properties: {visible: false, align: center, bold: true, font_size: 20}
+      type: Label
+      layout_properties: {grid_position: 'KUPCAH,NRICFI'}
+    data_bindings:
+    - {property: border, code: 'self.item['''']', writeback: false}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+custom_component: true
