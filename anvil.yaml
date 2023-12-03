@@ -9,7 +9,7 @@ services:
   server_config: {}
 package_name: Teste_IA
 allow_embedding: false
-name: Clone of Clone of pharyngitis AI
+name: AI Pharyngitis
 runtime_options:
   version: 2
   client_version: '3'
