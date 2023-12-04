@@ -163,13 +163,21 @@ components:
         type: Label
         layout_properties: {grid_position: 'HEGCNR,OYNNCQ'}
       - name: radio_swollenadp_1
-        properties: {text: 'Yes', group_name: swollengroup, value: '1'}
+        properties: {text: '0', group_name: swollengroup, value: '0'}
         type: RadioButton
         layout_properties: {grid_position: 'BGJZCZ,LYHNED'}
       - name: radio_swollenadp_2
-        properties: {text: 'No', selected: false, group_name: swollengroup, value: '0'}
+        properties: {text: '1', selected: false, group_name: swollengroup, value: '1'}
         type: RadioButton
         layout_properties: {grid_position: 'BGJZCZ,DGXSEG'}
+      - name: radio_swollenadp_1_copy
+        properties: {text: '2', group_name: swollengroup, value: '2'}
+        type: RadioButton
+        layout_properties: {grid_position: 'BGJZCZ,GUEYOS'}
+      - name: radio_swollenadp_2_copy
+        properties: {text: '3', selected: false, group_name: swollengroup, value: '3'}
+        type: RadioButton
+        layout_properties: {grid_position: 'BGJZCZ,PNTKHS'}
     - name: card_6
       properties: {role: card, border: '3px solid #2196F3'}
       type: ColumnPanel
